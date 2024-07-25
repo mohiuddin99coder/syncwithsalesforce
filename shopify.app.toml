@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c106adea871e3aa41d89f330e269bb16"
+name = "sync-with-salesforce"
+handle = "sync-with-salesforce"
+application_url = "https://pro-donor-relates-impose.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-6f7af47e.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_assigned_fulfillment_orders,read_content,read_customers,read_metaobject_definitions,read_metaobjects,read_orders,read_products,write_assigned_fulfillment_orders,write_content,write_customers,write_metaobject_definitions,write_metaobjects,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://pro-donor-relates-impose.trycloudflare.com/auth/callback",
+  "https://pro-donor-relates-impose.trycloudflare.com/auth/shopify/callback",
+  "https://pro-donor-relates-impose.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
